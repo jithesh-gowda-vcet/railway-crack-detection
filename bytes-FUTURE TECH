@@ -1,0 +1,59 @@
+# AI Railway Track Crack Detection
+
+**Detect • Locate • Alert** – Byte Race 2026 (Idea Submission)
+Vivekananda College of Engineering & Technology (VCET), Puttur
+
+## Problem
+Railway tracks are mostly inspected by hand, with workers walking long stretches. This is slow, risky, and easy to get wrong, especially at night or in bad weather. Small cracks can go unnoticed until they grow, causing derailments and costly emergency repairs.
+
+## Solution
+A low-cost, rail-riding robot with a Raspberry Pi camera that uses AI to detect track cracks, tags their GPS location, and alerts maintenance teams through a live dashboard.
+
+## Key Features
+1. **AI Crack Detection** – a lightweight model on the Raspberry Pi spots cracks in live camera footage with a confidence score.
+2. **GPS Defect Mapping** – each crack is logged with location, time, and image.
+3. **Smart Alerts** – severity-based alerts (minor / moderate / critical) via Telegram/SMS, plus a dashboard for maintenance planning.
+
+## System Architecture
+Data Capture → AI Detection → Locate (GPS) → Database → Dashboard & Alerts
+
+![Architecture](architecture_diagram.png)
+
+## Tech Stack
+| Layer | Technology |
+|---|---|
+| Frontend | React, Tailwind CSS, Leaflet.js |
+| Backend | Python FastAPI |
+| Database & Storage | Firebase, SQLite (on the Pi) |
+| AI / ML | YOLOv8-nano / TensorFlow Lite, OpenCV |
+| Alerts | Telegram Bot API |
+| Hardware | Raspberry Pi 4, Pi Camera, GPS module (NEO-6M), motor driver + DC motors |
+| Tools | VS Code, GitHub, Google Colab, Roboflow |
+
+## Project Status
+- [x] Problem analysis and concept design
+- [x] Architecture and tech stack selection
+- [ ] Dataset collection and model training
+- [ ] GPS tagging and alert system
+- [ ] Dashboard
+- [ ] Robot assembly and demo run
+
+## Setup (planned)
+```bash
+git clone https://github.com/jithesh-gowda-vcet/railway-crack-detection.git
+cd railway-crack-detection
+pip install -r requirements.txt
+python detect.py
+```
+*(Code will be added as development progresses.)*
+
+## Team – Future Tech
+| Name | Role |
+|---|---|
+| Jithesh | Team Leader |
+| Nikshep Krishna | Team Member |
+| Nisha AS | Team Member |
+| Jasmitha | Team Member |
+
+**College:** Vivekananda College of Engineering & Technology, Puttur
+**Event:** Byte Race 2026
